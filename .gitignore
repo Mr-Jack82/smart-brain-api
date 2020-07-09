@@ -1,2 +1,3 @@
 .yarn*
 logfile
+node_modules/
