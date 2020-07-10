@@ -7,6 +7,7 @@ const register = require("./controllers/register");
 const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const image = require("./controllers/image");
+const port = process.env.PORT || 3000;
 
 const db = knex({
   client: "pg",
@@ -40,7 +41,6 @@ app.post("./imageurl", (req, res) => {
   image.handleApiCall(req, res);
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log("app is running on port ${PORT}");
+app.listen(port, () => {
+  console.log("app is running on port ${port}");
 });
