@@ -7,12 +7,7 @@ const app = new Clarifai.App({
 
 const handleApiCall = (req, res) => {
   app.models
-    .predict(
-      // This part has been updated with the recent Clarifai changes. Used to be:
-      // .predict(Clarifai.FACE_DETECT_MODEL, ....)
-      "e15d0f873e66047e579f90cf82c9882z",
-      req.body.input
-    )
+    .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
     .then((data) => {
       res.json(data);
     })
