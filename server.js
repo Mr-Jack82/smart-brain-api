@@ -9,6 +9,7 @@ const profile = require("./controllers/profile");
 const image = require("./controllers/image");
 const port = process.env.PORT || 3000;
 
+// Use this method only for development purposes
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 const db = knex({
